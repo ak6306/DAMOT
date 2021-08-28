@@ -1,4 +1,4 @@
-package com.company;
+package com.damot;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.damot;
 
 public class Player {
     private int health;

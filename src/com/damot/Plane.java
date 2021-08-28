@@ -1,4 +1,4 @@
-package com.company;
+package com.damot;
 
 public class Plane {
     private int Xdistance;

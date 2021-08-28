@@ -1,4 +1,4 @@
-package com.company;
+package com.damot;
 
 public class Sword extends Weapon {
     private int Xdistance;
