@@ -1,6 +1,7 @@
-package com.damot;
+package com.damot.Object;
 
 public class Sword extends Weapon {
+    public static final String SWORD = "sword";
     private int Xdistance;
     private int Ydistance;
 
@@ -27,5 +28,9 @@ public class Sword extends Weapon {
 
     public void setYdistance(int ydistance) {
         Ydistance = ydistance;
+    }
+
+    public String getName(){
+        return SWORD;
     }
 }

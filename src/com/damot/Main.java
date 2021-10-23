@@ -1,5 +1,7 @@
 package com.damot;
 
+import com.damot.Object.Sword;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +12,7 @@ public class Main {
         Sword sword = new Sword(100, 25, 4, 4);
         Inventory inventory = new Inventory(10);
         Navigation navigation = new Navigation(player, plane);
+        InteractiveObjectList interactiveObjectList = new InteractiveObjectList();
         System.out.println("Hello!, Use Walk and direction(North, South, East, West) to walk\nExample: Walk South\nType 'help' anytime for help");
         int flag = 1;
         while (flag == 1) {
@@ -20,6 +23,8 @@ public class Main {
             input = scanner.nextLine();
             input = input.toLowerCase();
             navigation.move(input);
+            BasicActions basicActions = new BasicActions(input, inventory);
+            basicActions.pickUp();
 
             if (input.equalsIgnoreCase("exit")) {
                 flag = 0;

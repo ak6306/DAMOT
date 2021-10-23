@@ -1,4 +1,4 @@
-package com.damot;
+package com.damot.Object;
 
 public class Weapon {
    private int health;
@@ -23,5 +23,9 @@ public class Weapon {
 
     public void setDamage(int damage) {
         this.damage = damage;
+    }
+
+    public String getName(){
+        return null;
     }
 }
