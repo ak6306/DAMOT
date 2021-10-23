@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Plane plane = new Plane(10, 10);
-        Player player = new Player(120, 0, 0);
+        Player player = new Player(100, 0, 0);
         Sword sword = new Sword(100, 25, 4, 4);
         Inventory inventory = new Inventory(10);
         Navigation navigation = new Navigation(player, plane);
