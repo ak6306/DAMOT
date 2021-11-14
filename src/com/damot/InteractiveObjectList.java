@@ -1,9 +1,9 @@
 package com.damot;
 
-import com.damot.Object.Sword;
-import com.damot.Object.Weapon;
+import com.damot.Objects.InteractiveObjects;
+import com.damot.Objects.Weapons.Sword;
+import com.damot.Objects.Weapons.Weapon;
 
-import java.time.temporal.JulianFields;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -12,30 +12,46 @@ import java.util.List;
 //provides and maintain a list of available objects that can be interacted with
 
 public class InteractiveObjectList {
-    Sword sword;
-    List<Object> list;
+    List<InteractiveObjects> list;
 
-    public InteractiveObjectList(){
-        list = initList();
-        sword = new Sword(100, 25, 4, 4);
+    public InteractiveObjectList(InteractiveObjects ...interactiveObjects){
+        list = initList(interactiveObjects);
     }
 
-    public List<Object> getInteractiveObjects(){
+    public List<InteractiveObjects> getInteractiveObjects() {
         return list;
     }
 
-    public ArrayList<String> getInteractiveObjectsName(){
+    public String getObjectName(InteractiveObjects interactiveObjects) throws Exception {
+        if(list.contains(interactiveObjects)) {
+            return  interactiveObjects.getName();
+        }else {
+            throw new Exception();
+        }
+    }
+
+    public InteractiveObjects getObject(String objectName) throws Exception {
+        for (InteractiveObjects i : list) {
+            if (i.getName().equalsIgnoreCase(objectName)) {
+                return i;
+            }
+        }
+        throw new Exception();
+    }
+
+    public ArrayList<String> getInteractiveObjectsName() {
         ArrayList<String> arrayList = new ArrayList<>();
-        for(Object o : list){
-            Weapon weapon = (Weapon) o;
-            arrayList.add(weapon.getName());
+        for(InteractiveObjects i : list){
+            arrayList.add(i.getName());
         }
         return arrayList;
     }
 
-    public List<Object> initList(){
-        List<Object> list = new LinkedList<>();
-        list.add(sword);
+    public List<InteractiveObjects> initList(InteractiveObjects ...interactiveObjects) {
+        List<InteractiveObjects> list = new LinkedList<>();
+        for(InteractiveObjects i : interactiveObjects ) {
+            list.add(i);
+        }
         return list;
     }
 }
