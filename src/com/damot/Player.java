@@ -36,7 +36,8 @@ public class Player {
     }
     public void East(int increment){
         Xdistance += increment;
-    }public void North(int increment){
+    }
+    public void North(int increment){
         Ydistance += increment;
     }
     public void South(int increment){

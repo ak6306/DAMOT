@@ -15,7 +15,7 @@ public class Inventory {
 
 
     public void add(String s){
-        if(count<=size) {
+        if(count<size) {
             arr[count] = s;
             count++;
         }else{

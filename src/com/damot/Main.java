@@ -1,7 +1,7 @@
 package com.damot;
 
 import com.damot.Object.Sword;
-
+import com.damot.Object.Halberd;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +10,7 @@ public class Main {
         Plane plane = new Plane(10, 10);
         Player player = new Player(100, 0, 0);
         Sword sword = new Sword(100, 25, 4, 4);
+        Halberd halberd = new Halberd(50,35,6,6);
         Inventory inventory = new Inventory(10);
         Navigation navigation = new Navigation(player, plane);
         InteractiveObjectList interactiveObjectList = new InteractiveObjectList();
@@ -33,6 +34,10 @@ public class Main {
             if (player.getYdistance() == sword.getYdistance() && player.getXdistance() == sword.getXdistance()) {
                 System.out.println("You found a Sword!!");
                 inventory.add("Sword");
+            }
+            if (player.getYdistance() == halberd.getYdistance() && player.getXdistance() == halberd.getXdistance()) {
+                System.out.println("You found a Halberd!!");
+                inventory.add("Halberd");
             }
         }
     }
