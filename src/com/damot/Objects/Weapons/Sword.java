@@ -1,4 +1,4 @@
-package com.damot.Object;
+package com.damot.Objects.Weapons;
 
 public class Sword extends Weapon {
     public static final String SWORD = "sword";

@@ -14,15 +14,18 @@ public class BasicActions extends Actions{
     private ArrayList<String> action;
     private Inventory inventory;
 
-    public BasicActions(String input, Inventory inventory) {
-        super(inventory);
-        action = new ArrayList<String>(Arrays.asList(preparedString(input)));
+    public BasicActions(InteractiveObjectList interactiveObjectList, Inventory inventory) {
+        super(interactiveObjectList, inventory);
+        this.inventory = inventory;
     }
 
-    public void pickUp() {
-        if(action.contains(PICK_UP)){
-            if(getInteractiveObjectsName().contains(action)){
-                inventory.add(action.get(1));
+    public void pickUp(String input) throws Exception {
+        action = new ArrayList<>(Arrays.asList(preparedString(input)));
+        if(action.contains(PICK_UP)) {
+            if(getInteractiveObjectsName().contains(action.get(1))){
+                inventory.add(getObject(action.get(1)));
+            }else{
+                System.out.println("This Object can't be picked up. Refer Guide!");
             }
         }
     }

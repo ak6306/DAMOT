@@ -1,8 +1,10 @@
 package com.damot;
 
+import com.damot.Objects.InteractiveObjects;
+
 public class Inventory {
     private int count;
-    private  String[] arr;
+    private InteractiveObjects[] arr;
     int size;
 
 
@@ -10,11 +12,11 @@ public class Inventory {
     public Inventory(int size) {
         this.count = 0;
         this.size = size;
-        this.arr = new String[size];
+        this.arr = new InteractiveObjects[size];
     }
 
 
-    public void add(String s){
+    public void add(InteractiveObjects s) {
         if(count<size) {
             arr[count] = s;
             count++;
@@ -24,7 +26,7 @@ public class Inventory {
     }
     public void drop(String s){
         for(int i=0;i<size;i++){
-            if(arr[i] == s)
+            if(arr[i].getName().equals(s))
                 arr[i] = null;
         }
     }
@@ -34,7 +36,7 @@ public class Inventory {
         }else{
         System.out.print("Your Inventory");
         for(int i=0;i<count;i++){
-                System.out.println("\n"+ arr[i]);
+                System.out.println("\n"+ arr[i].getName());
 
             }
         }}
