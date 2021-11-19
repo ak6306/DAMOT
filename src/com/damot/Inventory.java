@@ -2,6 +2,8 @@ package com.damot;
 
 import com.damot.Objects.InteractiveObjects;
 
+import java.util.Arrays;
+
 public class Inventory {
     private int count;
     private InteractiveObjects[] arr;
@@ -32,7 +34,7 @@ public class Inventory {
     }
     public void show(){
         if(count ==0){
-            System.out.println("Your inventory is empty!");
+            System.out.println("Your inventory is empty.");
         }else{
         System.out.print("Your Inventory");
         for(int i=0;i<count;i++){
@@ -40,4 +42,24 @@ public class Inventory {
 
             }
         }}
+    public boolean findByString(String weaponName) {
+        for(int i =0; i < arr.length; i ++) {
+            if (arr[i].getName() == weaponName) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public InteractiveObjects fetch(String weaponName) {
+        if(arr[0] == null)
+            return null;
+        else {
+            for (InteractiveObjects interactiveObjects : arr) {
+                if (interactiveObjects.getName().equals(weaponName))
+                    return interactiveObjects;
+            }
+        }
+        return null;
+    }
 }

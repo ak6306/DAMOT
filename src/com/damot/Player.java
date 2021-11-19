@@ -31,6 +31,8 @@ public class Player {
         return Ydistance;
     }
 
+    public int getHealth() {return health;}
+
     public void West(int increment){
         Xdistance -= increment;
     }
@@ -45,6 +47,10 @@ public class Player {
     }
     public void currentPosition() {
         System.out.println("Currently player is at: X-->" +Xdistance + " and Y-->" +Ydistance);
+    }
+
+    public void showHealth() {
+        System.out.println("------------------\nYour Current Health Point is: "+ getHealth() +"\n------------------");
     }
 
 }
