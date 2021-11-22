@@ -26,19 +26,23 @@ public class Inventory {
             System.out.println("Inventory Full!");
         }
     }
-    public void drop(String s){
-        for(int i=0;i<size;i++){
-            if(arr[i].getName().equals(s))
+    public void drop(String s) {
+        for(int i=0;i<size;i++) {
+            if(arr[i]!= null && arr[i].getName().equals(s)) {
                 arr[i] = null;
+                if (count > 0) count--;
+                return;
+            }
+            }
         }
-    }
     public void show(){
         if(count ==0){
             System.out.println("Your inventory is empty.");
         }else{
-        System.out.print("Your Inventory");
+        System.out.println("Your Inventory");
         for(int i=0;i<count;i++){
-                System.out.println("\n"+ arr[i].getName());
+            if(arr[i]!=null)
+                System.out.println(arr[i].getName());
 
             }
         }}

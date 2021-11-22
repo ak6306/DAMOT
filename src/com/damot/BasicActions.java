@@ -33,9 +33,9 @@ public class BasicActions extends Actions{
         action = new ArrayList<>(Arrays.asList(preparedString(input)));
         if(action.contains(DROP)) {
             if(getInteractiveObjectsName().contains(action.get(1))){
-                inventory.add(getObject(action.get(1)));
+                inventory.drop(getObject(action.get(1)).getName());
             }else{
-                System.out.println("This Object can't be picked up. Refer Guide!");
+                System.out.println("This Object can't be dropped. Refer Guide!");
             }
         }
     }
