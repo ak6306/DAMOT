@@ -29,8 +29,15 @@ public class BasicActions extends Actions{
             }
         }
     }
-    public void drop() {
-
+    public void drop(String input) throws Exception {
+        action = new ArrayList<>(Arrays.asList(preparedString(input)));
+        if(action.contains(DROP)) {
+            if(getInteractiveObjectsName().contains(action.get(1))){
+                inventory.drop(getObject(action.get(1)).getName());
+            }else{
+                System.out.println("This Object can't be dropped. Refer Guide!");
+            }
+        }
     }
     public void open() {
 
