@@ -1,10 +1,8 @@
 package com.damot;
 
-import com.damot.Objects.InteractiveObjects;
-
 import java.util.ArrayList;
-import java.util.List;
-
+import com.damot.InteractiveObjectList;
+import com.damot.Objects.InteractiveObjects;
 public class Actions {
 
     private InteractiveObjectList interactiveObjectList = null;

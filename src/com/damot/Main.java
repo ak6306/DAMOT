@@ -1,8 +1,8 @@
 package com.damot;
 
+import com.damot.Objects.Weapons.*;
 import com.damot.Combat.BasicCombat;
-import com.damot.Objects.Weapons.Sword;
-import com.damot.Objects.Weapons.Halberd;
+import com.damot.Map;
 import com.damot.StoryWeaver.StoryWeaver;
 
 import java.util.Scanner;
@@ -27,6 +27,9 @@ public class Main {
         InteractiveObjectList interactiveObjectList = new InteractiveObjectList(halberd, sword);
         BasicActions basicActions = new BasicActions(interactiveObjectList, inventory);
         BasicCombat basicCombat = new BasicCombat(player,inventory, enemy, enemy1);
+        Map mapObj = new Map();
+        mapObj.makeMap();
+        mapObj.printMap();
         StoryWeaver storyWeaver = new StoryWeaver(player);
 
         System.out.println(ANSI_BLUE + "Hello!, Use Walk and direction(North, South, East, West) to walk\nExample: Walk South\nType 'help' anytime for help" + ANSI_RESET);

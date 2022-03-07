@@ -1,11 +1,6 @@
 package com.damot;
-
 import com.damot.Objects.InteractiveObjects;
-import com.damot.Objects.Weapons.Sword;
-import com.damot.Objects.Weapons.Weapon;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 

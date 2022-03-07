@@ -1,7 +1,5 @@
 package com.damot.Objects.Weapons;
-
 import com.damot.Objects.InteractiveObjects;
-
 public class Weapon extends InteractiveObjects {
    private int health;
     private int damage;
