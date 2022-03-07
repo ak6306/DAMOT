@@ -1,5 +1,8 @@
 package com.damot;
 
+/**
+ * Contains functions move
+ */
 public class Navigation {
     private Player player;
     private Plane plane;
