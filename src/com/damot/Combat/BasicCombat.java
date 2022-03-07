@@ -8,6 +8,8 @@ import com.damot.Player;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import static com.damot.Constants.ColorConstant.*;
+
 //Basic combat enables turn based combat. Changes the game state to locked combat state upon activation.
 public class BasicCombat {
     Player player;
@@ -26,7 +28,7 @@ public class BasicCombat {
             System.out.println("Threat present at your current location");
             System.out.println("Entering Combat\n Use Attack <weapon name> to attack the enemy.\n If weapon is not present basic fist damage will be dealt");
             currentEnemy.showHealth();
-            //set state variable -- future task
+            //TODO set state variable -- future task
             combat(player, currentEnemy, inventory);
         }
     }
@@ -50,13 +52,13 @@ public class BasicCombat {
 
             if(enemy.getHealth() > 0) {
                 //TimeUnit.SECONDS.sleep(1);
-                System.out.println("Enemy Attacked You.");
+                System.out.println(ANSI_RED + "Enemy Attacked You." + ANSI_RESET);
                 //currently enemy does 25 damage and kills in 4 hits
                 player.setHealth(player.getHealth() - 25);
                 player.showHealth();
         }
             if(enemy.getHealth() <= 0 )
-                System.out.println("\nYou won this fight!\nYour current health: "+ player.getHealth());
+                System.out.println(ANSI_GREEN + "\nYou won this fight!\nYour current health: "+ player.getHealth() + ANSI_RESET);
         }
     }
 
