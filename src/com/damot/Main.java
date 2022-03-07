@@ -1,8 +1,9 @@
 package com.damot;
 
+import com.damot.Objects.Weapons.*;
 import com.damot.Combat.BasicCombat;
-import com.damot.Objects.Weapons.Sword;
-import com.damot.Objects.Weapons.Halberd;
+import com.damot.Map;
+
 
 import java.util.Scanner;
 
@@ -20,6 +21,9 @@ public class Main {
         InteractiveObjectList interactiveObjectList = new InteractiveObjectList(halberd, sword);
         BasicActions basicActions = new BasicActions(interactiveObjectList, inventory);
         BasicCombat basicCombat = new BasicCombat(player,inventory, enemy, enemy1);
+        Map mapObj = new Map();
+        mapObj.makeMap();
+        mapObj.printMap();
         System.out.println("Hello!, Use Walk and direction(North, South, East, West) to walk\nExample: Walk South\nType 'help' anytime for help");
         int flag = 1;
         while (flag == 1) {

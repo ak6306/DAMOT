@@ -1,9 +1,5 @@
 package com.damot;
-
 import com.damot.Objects.InteractiveObjects;
-
-import java.util.Arrays;
-
 public class Inventory {
     private int count;
     private InteractiveObjects[] arr;
@@ -17,6 +13,13 @@ public class Inventory {
         this.arr = new InteractiveObjects[size];
     }
 
+    public InteractiveObjects[] getArr() {
+        return arr;
+    }
+
+    public int getCount() {
+        return count;
+    }
 
     public void add(InteractiveObjects s) {
         if(count<size) {

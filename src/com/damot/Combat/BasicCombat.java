@@ -2,11 +2,10 @@ package com.damot.Combat;
 
 import com.damot.Enemy;
 import com.damot.Inventory;
-import com.damot.Objects.Weapons.Weapon;
 import com.damot.Player;
+import com.damot.Objects.Weapons.*;
 
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 //Basic combat enables turn based combat. Changes the game state to locked combat state upon activation.
 public class BasicCombat {
