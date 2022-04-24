@@ -14,7 +14,7 @@ public class Halberd extends Weapon{
         System.out.println("Halberd is at: X-->" +Xdistance + " and Y-->" +Ydistance);
     }
 
-    public int getXdistance() {
+    public int getXDistance() {
         return Xdistance;
     }
 
@@ -22,7 +22,7 @@ public class Halberd extends Weapon{
         Xdistance = xdistance;
     }
 
-    public int getYdistance() {
+    public int getYDistance() {
         return Ydistance;
     }
 

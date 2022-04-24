@@ -14,7 +14,7 @@ public class Sword extends Weapon {
         System.out.println("Sword is at: X-->" +Xdistance + " and Y-->" +Ydistance);
     }
 
-    public int getXdistance() {
+    public int getXDistance() {
         return Xdistance;
     }
 
@@ -22,7 +22,7 @@ public class Sword extends Weapon {
         Xdistance = xdistance;
     }
 
-    public int getYdistance() {
+    public int getYDistance() {
         return Ydistance;
     }
 

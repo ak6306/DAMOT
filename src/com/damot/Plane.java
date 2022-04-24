@@ -1,22 +1,18 @@
 package com.damot;
 
 public class Plane {
-    private int Xdistance;
-    private int Ydistance;
-    public Plane(){
-        this.Xdistance = 10;
-        this.Ydistance = 10;
-    }
-    public Plane(int Xdistance, int Ydistance) {
-        this.Xdistance = Xdistance;
-        this.Ydistance = Ydistance;
+    private int XDistance;
+    private int YDistance;
+    public Plane(int XDistance, int YDistance) {
+        this.XDistance = XDistance;
+        this.YDistance = YDistance;
     }
 
-    public int getXdistance() {
-        return Xdistance;
+    public int getXDistance() {
+        return XDistance;
     }
 
-    public int getYdistance() {
-        return Ydistance;
+    public int getYDistance() {
+        return YDistance;
     }
 }
