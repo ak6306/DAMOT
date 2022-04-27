@@ -47,12 +47,12 @@ public class NonInteractiveObjects {
                 .map(arr -> arr.toArray(Integer[]::new))
                 .toArray(Integer[][]::new));
 
-        for(int i = 0; i < plane.getYDistance(); i++) {
-            for(int j = 0; j< plane.getXDistance() ; j++){
-                System.out.print(theList[i][j] + " ");
-            }
-            System.out.println();
-        }
+//        for(int i = 0; i < plane.getYDistance(); i++) {
+//            for(int j = 0; j< plane.getXDistance() ; j++){
+//                System.out.print(theList[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
         return theList;
     }
 

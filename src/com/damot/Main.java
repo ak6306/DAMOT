@@ -21,15 +21,15 @@ public class Main {
 
         Enemy enemy = new Enemy(50, 7, 7);
         Enemy enemy1 = new Enemy(50, 35,35);
-
+        Enemy enemy2 = new Enemy(25, 1,5);
         Inventory inventory = new Inventory(10);
         NonInteractiveObjects nonInteractiveObjects = new NonInteractiveObjects();
         Integer[][] nonInteractiveObjectList = nonInteractiveObjects.generateNonInteractiveObjects(plane);
         Navigation navigation = new Navigation(player, plane, nonInteractiveObjectList);
         InteractiveObjectList interactiveObjectList = new InteractiveObjectList(halberd, sword);
         BasicActions basicActions = new BasicActions(interactiveObjectList, inventory);
-        BasicCombat basicCombat = new BasicCombat(player,inventory, enemy, enemy1);
-        Map map = new Map(player, plane, interactiveObjectList,nonInteractiveObjectList , enemy, enemy1);
+        BasicCombat basicCombat = new BasicCombat(player,inventory, enemy, enemy1, enemy2);
+        Map map = new Map(player, plane, interactiveObjectList,nonInteractiveObjectList , enemy, enemy1, enemy2);
         StoryWeaver storyWeaver = new StoryWeaver(player);
         System.out.println(ANSI_BLUE + "Hello!, Use Walk and direction(North, South, East, West) to walk\nExample: " +
                 "Walk South\nType 'help' anytime for help" + ANSI_RESET);

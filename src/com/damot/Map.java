@@ -34,10 +34,10 @@ public class Map {
 
     public void makeMap() {
         List<InteractiveObjects> interactiveObjects = interactiveObjectList.getInteractiveObjects();
-        for(int i = 0; i < plane.getYDistance(); i++) {
+        for (int i = 0; i < plane.getYDistance(); i++) {
             innerList = new ArrayList<Integer>();
-            if (i==0 || i==plane.getYDistance()-1){
-                for(int j = 0; j <plane.getXDistance(); j++){
+            if (i == 0 || i == plane.getYDistance() - 1) {
+                for (int j = 0; j < plane.getXDistance(); j++) {
                     innerList.add(2);
                 }
             } else {
@@ -50,7 +50,7 @@ public class Map {
                     //adds player position
                     if (i == player.getYdistance() && j == player.getXdistance()) {
                         innerList.add(3);
-                    }else innerList.add(0);
+                    } else innerList.add(0);
 //                    if (lineFlag == 0) {
 //                        innerList.add(0);
 //                    }
@@ -63,33 +63,22 @@ public class Map {
                     }
                     if (enemies != null) {
                         for (Enemy enemy : enemies) {
-                            if (enemy.getHealth()>0 && i == enemy.getYdistance() && j == enemy.getXdistance()) {
+                            if (enemy.getHealth() > 0 && i == enemy.getYdistance() && j == enemy.getXdistance()) {
                                 innerList.add(5);
                             }
                         }
                     }
-                    if(nonInteractiveObjectList[i][j] == 1) {
+                    if (nonInteractiveObjectList[i][j] == 1) {
                         innerList.add(2);
                     }
                 }
                 innerList.add(2);
             }
             this.map1.add(innerList);
-            }
         }
+    }
 
-//    public void updateMap() {
-//        for(int i = 0; i < plane.getYDistance(); i++) {
-//            for (int j = 1; j < plane.getXDistance() - 1; j++) {
-//                if(i == player.getYdistance() && j == player.getXdistance()) {
-//                    innerList.add(3);
-//                }
-//            }
-//        }
-//        this.map1.add(innerList);
-//    }
-
-    public void printMap(){
+    public void printMap() {
        Integer[][] theMap = (Integer[][]) flipInPlace(map1.
                 stream()
                 .map(arr -> arr.toArray(Integer[]::new))
