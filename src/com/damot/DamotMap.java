@@ -1,6 +1,9 @@
 package com.damot;
 
 import java.io.*;
+/**
+ * Java Class to create maps
+ */
 class DamotMap{
     private int width;
     private int height;
